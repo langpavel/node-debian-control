@@ -8,7 +8,15 @@
     "type": "git",
     "url": "git://github.com/langpavel/node-debian-control.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "async": "latest",
+    "optimist": "latest",
+    "express": "latest",
+    "jade": "latest",
+    "stylus": "latest",
+    "nib": "latest",
+    "canvas": "latest"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {

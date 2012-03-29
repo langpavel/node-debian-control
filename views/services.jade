@@ -1,0 +1,11 @@
+h1= title
+
+ul
+  each service in services
+    li
+      b #{service.name} 
+      dl
+        each val, attr in service.properties
+          dt= attr
+          dd= val
+p Total #{services.length} services
