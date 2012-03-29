@@ -17,3 +17,4 @@ exports.index = function(req, res) {
 
 
 exports.services = require('./services');
+exports.users = require('./users');

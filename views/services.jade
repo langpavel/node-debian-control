@@ -1,11 +1,16 @@
-h1= title
+h1 List of available services
 
-ul
-  each service in services
-    li
-      b #{service.name} 
-      dl
-        each val, attr in service.properties
-          dt= attr
-          dd= val
+table
+  thead
+    tr
+      th Service
+      th Description
+
+  tbody
+    each service in services
+      tr(id='service-${service.name}', data-service=JSON.stringify(service.properties))
+        td 
+          a(href='/services/#{service.name}') #{service.properties['provides'] || service.name}
+        td= service.properties['short-description'] || service.properties['description']
+          
 p Total #{services.length} services

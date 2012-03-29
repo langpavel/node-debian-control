@@ -1,0 +1,23 @@
+h1= title
+
+table
+  thead
+    tr
+      th Login
+      th 
+        span(title='locked (L), no password (NP), usable password (P)') Password Type
+      th Last password<br/>Change
+      th Min<br/>Age
+      th Max<br/>Age
+      th Warning<br/>Period
+      th Inactivity<br/>Period
+  tbody
+    each user in users
+      tr
+        td= user.login
+        td= user.passwordType
+        td #{[user.last_change.getDate(), user.last_change.getMonth()+1, user.last_change.getFullYear()].join('.')}
+        td= user.min_age
+        td= user.max_age
+        td= user.warn_period
+        td= user.inactivity_period

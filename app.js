@@ -42,10 +42,14 @@ app.configure('production', function(){
 
 // Routes
 
+// Main page
 app.get('/', routes.index);
 
-app.get('/services/', routes.services.index);
+// Services
+routes.services.configure('/services', app);
 
+// Users
+routes.users.configure('/users', app);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
